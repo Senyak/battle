@@ -2,9 +2,22 @@ cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
 set (ENGINE_PROJECT_NAME core)
 
+
+set (ENGINE_PUBLIC_INCLUDES 
+	includes/core/application.hpp
+
+)
+
+set (ENGINE_PRIVATE_SOURCES 
+	src/core/application.cpp
+
+)
+
+
+
 add_library(${ENGINE_PROJECT_NAME} STATIC
-	src/core/utils/test.cpp
-	includes/core/utils/test.hpp
+	${ENGINE_PUBLIC_INCLUDES} 
+	${ENGINE_PRIVATE_SOURCES} 
 )
 	
 	
