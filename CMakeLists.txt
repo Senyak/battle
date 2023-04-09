@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
-project(battle)
+set(PROJECT_NAME battle)
 
-add_executable(battle src/main.cpp)
+add_subdirectory(core)
+add_subdirectory(editor)
